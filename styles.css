@@ -1,0 +1,177 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 0 !important;
+}
+header {
+  width: 80%;
+  max-width: 1200px;
+}
+.logo {
+  width: 50px;
+  cursor: pointer;
+}
+li a {
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+}
+h4 {
+  font-size: 1.3rem;
+}
+.center {
+  margin: auto;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  vertical-align: middle;
+}
+.score-container {
+  margin-top: 10px;
+  width: 200px;
+}
+
+.game-board {
+  background: black;
+  margin: 15px auto;
+  width: 360px;
+  height: 360px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+.box {
+  width: 120px;
+  height: 120px;
+  background: white;
+  color: black;
+  cursor: pointer;
+  font-size: 88px;
+}
+button.btn {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 0%;
+  width: 100px;
+  margin: 5px;
+}
+#restart {
+  display: none;
+  margin: 8px auto;
+  text-align: center;
+}
+button.active,
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+button:active {
+  transform: scale(0.91);
+  transition: ease;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    width: 35px;
+  }
+  li a,
+  .mode {
+    font-size: 0.9rem;
+  }
+  h4,
+  button.btn {
+    font-size: 1.1rem;
+  }
+  .score-container {
+    width: 300px;
+  }
+  .game-board {
+    width: 300px;
+    height: 300px;
+    margin: 30px auto;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .logo {
+    width: 30px;
+  }
+  li a,
+  .mode {
+    font-size: 0.8rem;
+  }
+  h4,
+  button.btn {
+    font-size: 1rem;
+  }
+  .score-container {
+    width: 270px;
+  }
+  .game-board {
+    width: 270px;
+    height: 270px;
+    margin: 30px auto;
+  }
+  .box {
+    width: 90px;
+    height: 90px;
+    font-size: 60px;
+  }
+}
+@media only screen and (max-width: 415px) {
+  .box {
+    font-size: 68px;
+  }
+}
+@media only screen and (max-height: 580px) {
+  .logo {
+    width: 20px;
+  }
+  li a,
+  .mode {
+    font-size: 0.8rem;
+  }
+  h4,
+  button.btn {
+    font-size: 0.9rem;
+  }
+  .score-container {
+    width: 240px;
+  }
+  .game-board {
+    width: 240px;
+    height: 240px;
+    margin: 15px auto;
+  }
+  .box {
+    width: 80px;
+    height: 80px;
+    font-size: 54px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .logo {
+    width: 20px;
+  }
+  li a,
+  .mode {
+    font-size: 0.8rem;
+  }
+  h4,
+  button.btn {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (min-height: 1024px) {
+  .main-container {
+    margin-top: 100px;
+  }
+  .message {
+    margin: 50px auto;
+  }
+}

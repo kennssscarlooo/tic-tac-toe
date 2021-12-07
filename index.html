@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Kenns Carlo Estavillo" />
+    <meta name="description" content="Tic Tac Toe game using JavaScript." />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Tic Tac Toe</title>
+    <link rel="icon" type="image/svg+xml" href="/Favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="center">
+      <nav class="navbar justify-content-between">
+        <!-- Logo -->
+        <a class="navbar-brand">
+          <img src="/logo.svg" class="logo" alt="kc-logo" />
+        </a>
+        <!-- Dropdown menu -->
+        <div class="dropdown gamemode">
+          <a
+            class="btn dropdown-toggle"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span class="mode">Easy</span>
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu"
+            aria-labelledby="dropdownMenuButton1"
+          >
+            <li>
+              <a id="easy" value="easy" class="dropdown-item active">Easy</a>
+            </li>
+            <li>
+              <a id="medium" value="medium" class="dropdown-item">Medium</a>
+            </li>
+            <li>
+              <a id="hard" value="hard" class="dropdown-item">Hard</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="main-container center">
+      <h2>Tic Tac Toe</h2>
+      <div class="score-container center">
+        <div class="row align-items-start">
+          <div class="col"><h4>Player</h4></div>
+          <div class="col"><h4>AI</h4></div>
+        </div>
+      </div>
+      <div class="score-container center">
+        <div class="row align-items-start">
+          <div class="col">
+            <h4 id="player1">0</h4>
+          </div>
+          <div class="col">
+            <h4 id="player2">0</h4>
+          </div>
+        </div>
+      </div>
+      <div class="game-board">
+        <div class="box" id="0"></div>
+        <div class="box" id="1"></div>
+        <div class="box" id="2"></div>
+        <div class="box" id="3"></div>
+        <div class="box" id="4"></div>
+        <div class="box" id="5"></div>
+        <div class="box" id="6"></div>
+        <div class="box" id="7"></div>
+        <div class="box" id="8"></div>
+      </div>
+
+      <div class="message">
+        <h4 id="message">Choose character to start</h4>
+      </div>
+      <div onclick="startGame()">
+        <button id="restart" class="btn active">Restart</button>
+      </div>
+      <div class="character" id="char">
+        <button id="px" type="button" class="btn">X</button>
+        <button id="po" type="button" class="btn">O</button>
+      </div>
+    </div>
+    <script type="text/javascript" src="/index.js"></script>
+  </body>
+</html>
